@@ -1,7 +1,7 @@
 class CreateFluidChanges < ActiveRecord::Migration
   def change
     create_table :fluid_changes do |t|
-    	t.string 	:type
+    	t.string 	:fluid_type
     	t.integer 	:mileage
     	t.string 	:name
     	t.string	:weight
