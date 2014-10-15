@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20141015173528) do
 
   create_table "fluid_changes", force: true do |t|
-    t.string   "type"
+    t.string   "fluid_type"
     t.integer  "mileage"
     t.string   "name"
     t.string   "weight"
