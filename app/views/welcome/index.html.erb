@@ -1,0 +1,11 @@
+"hello from welcome page"
+<%= link_to "Home", root_path %>
+<%= link_to "My Garage", vehicles_path %>
+
+<div class="login">
+	<%= form_tag("/login", :method => "post") do %>
+		<%= text_field_tag :username, nil, placeholder: :Username %><br>
+		<%= password_field_tag :password, nil, placeholder: :Password %><br>
+		<%= submit_tag :Login %>
+	<% end %>
+</div>
