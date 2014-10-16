@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 		if @user.save
 			sign_in(@user)
 			redirect_to root_path
+		else
+			redirect_to new_user_path
+			flash[:error] = @user.errors.empty? ? "Error" : @user.errors.full_messages.to_sentence
 		end
 	end
 
