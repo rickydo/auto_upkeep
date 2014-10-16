@@ -1,19 +1,19 @@
-"hello from welcome page"
-<%= link_to "Home", root_path %>
-<%= link_to "My Garage", vehicles_path %>
-<%= link_to "Sign Up", new_user_path %>
-
-<div class="login">
-	<%= form_tag("/login", :method => "post") do %>
-		<%= text_field_tag :username, nil, placeholder: :Username %><br>
-		<%= password_field_tag :password, nil, placeholder: :Password %><br>
-		<%= submit_tag :Login %>
+<div class="container">
+	<% if !current_user %>
+		<div class="general_welcome">
+			<p>This app is for the all the DIY people who maintain their own vehicles. Now you can keep records of all the fluid changes done to your car and keep track of the parts replaced on the vehicle. No more need for pen and paper and the risk of losing the notebook, piece of cardboard with mileage written on it, or the stapled sheets of paper. <%= link_to "Sign Up", new_user_path %> now or login here.
+			</p>
+			<div class="login">
+				<% if !current_user %>
+					<%= form_tag("/login", :method => "post") do %>
+						<%= text_field_tag :username, nil, placeholder: :Username %><br>
+						<%= password_field_tag :password, nil, placeholder: :Password %><br>
+						<%= submit_tag :Login %>
+					<% end %>
+					<%= flash[:error] if flash[:error] %>
+				<% end %>
+			</div>
+		</div>
 	<% end %>
-	<%= flash[:error] if flash[:error] %>
 </div>
-
-<% if !current_user %>
-	<%= "general main page"  %>
-<% end %>
-
 

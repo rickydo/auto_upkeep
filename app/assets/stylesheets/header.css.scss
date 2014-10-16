@@ -1,0 +1,37 @@
+header {
+	border: black solid 1px;
+	border-radius: 3px;
+	height: 100px;
+	width: 100%;
+	h1 {
+		text-align: center;
+	}
+	.nav_bar {
+		// height: 85px;
+		// width: 100%;
+		border: black solid 1px;
+		// position: absolute;
+		.nav_buttons, .login {
+			display: inline-block;
+			position: relative;
+		}
+
+		.nav_buttons {
+			border: black solid 1px;
+		}
+
+		.login {
+			float: right;
+			// position: absolute;
+			margin:5px 5px 0 0; 
+			input {
+
+			}
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+	}
+}
