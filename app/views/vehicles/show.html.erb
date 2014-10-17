@@ -1,0 +1,43 @@
+<div class="container">
+	<h2><%= @vehicle.vehicle_info %></h2>
+	<h3>Fluid Changes:</h3>
+		<%= link_to "Change a Fluid", new_vehicle_fluid_change_path(@vehicle.id) %>
+		<table class="fluid_change_table">
+			<tr>
+				<th>Fluid Type</th>
+				<th>Name</th>
+				<th>Weight</th>
+				<th>Mileage(miles)</th>
+				<th>Changed On</th>
+			</tr>
+
+			<% @vehicle.fluid_changes.order(created_at: :desc).each do |change| %>
+			<tr>
+				<td><%=change.fluid_type%></td>
+				<td><%= change.name %></td>
+				<td><%= change.weight %></td>
+				<td><%= change.mileage %></td>
+				<td><%= change.change_date %></td>
+			</tr>
+			<% end %>
+		</table>
+
+	<h3>Parts Maintenance</h3>
+		<%= link_to "Change a part", new_vehicle_part_path(@vehicle.id)  %>
+		<table class="parts_table">
+			<tr>
+				<th>Name</th>
+				<th>Part Number</th>
+				<th>Mileage(miles)</th>
+				<th>Changed On</th>
+			</tr>
+			<% @vehicle.parts.order(created_at: :desc).each do |part| %>
+			<tr>
+				<td><%= part.name %></td>
+				<td><%= part.part_number %></td>
+				<td><%= part.mileage %></td>
+				<td><%= part.part_date %></td>
+			</tr>
+			<% end %>
+		</table>
+</div>

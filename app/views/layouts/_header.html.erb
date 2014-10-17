@@ -1,0 +1,13 @@
+<header>
+
+	<div class="nav_bar">
+		<div class="nav_buttons"><%= link_to '<i class="fa fa-home"></i>'.html_safe, root_path %></div>
+		<div class="nav_buttons"><%= link_to '<i class="fa fa-car"></i>'.html_safe, vehicles_path %></div>
+		<h1>AutoUpkeep</h1>
+
+		<% if current_user %>
+			<%= link_to '<i class="fa fa-sign-out"></i>'.html_safe, logout_path, method: :destroy %>
+		<% end %>
+	
+	</div>
+</header>

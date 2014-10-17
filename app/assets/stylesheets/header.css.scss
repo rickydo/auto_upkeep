@@ -1,0 +1,29 @@
+header {
+	border: black solid 1px;
+	border-radius: 3px;
+	height: 75px;
+	width: 95%;
+	background-color: #848484;
+	margin: 0 auto;
+	h1 {
+		text-align: center;
+		display: inline-block;
+	}
+	.nav_bar {
+		.nav_buttons, .login {
+			display: inline-block;
+			position: relative;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		i {
+			font-size: 2.5rem;
+			color: white;
+			margin-left: 0.4rem;
+		}
+
+	}
+}

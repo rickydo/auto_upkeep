@@ -1,0 +1,10 @@
+<div class="part_form">
+	<%= form_for @part, url: {action: "create"} do |f| %>
+		<%= f.text_field :name, placeholder: "Part Name" %><br>
+		<%= f.text_field :part_number, placeholder: "Part Number" %><br>
+		<%= f.number_field :mileage, placeholder: "Miles" %><br>
+		<%= f.hidden_field :vehicle_id, :value => @vehicle_id %><br>
+		<%= f.submit "Change it!" %>
+	<% end %>
+	<%= flash[:error] if flash[:error] %>
+</div>

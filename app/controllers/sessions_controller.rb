@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 		if @user
 			if @user.authenticate(params[:password])
 				session[:user_id] = @user.id
-				redirect_to root_path
+				redirect_to vehicles_path
 			else 
 				redirect_to root_path
 			end

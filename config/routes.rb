@@ -2,14 +2,16 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  # get '/login' => 'sessions#new'
+  get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  post '/logout' => 'sessions#destroy'
 
-  resources :users, :only => [:new, :create]
-  resources :vehicles
+  	resources :users, :only => [:new, :create]
+  	resources :vehicles do 
 
-
+	  resources :fluid_change, :except => [:show, :destroy] 
+	  resources :part, :except => [:show, :destroy]
+	end
 
   
 end
