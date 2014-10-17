@@ -1,0 +1,16 @@
+<div class="container">
+	<h2><%= @vehicle.vehicle_info %></h2>
+	<h3>Fluid Changes:</h3>
+		<% @vehicle.fluid_changes.each do |change| %>
+			<ul>
+				<li><%=change.fluid_change_text%></li>
+			</ul>
+		<% end %>
+
+	<h3>Parts Maintenance</h3>
+		<% @vehicle.parts.each do |part| %>
+			<ul>
+				<li><%= part.part_text %></li>
+			</ul>
+		<% end %>
+</div>

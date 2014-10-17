@@ -4,7 +4,7 @@ class FluidChange < ActiveRecord::Base
 	validates :mileage, presence: true, numericality: { only_integer: true }
 
 	def fluid_change_text
-		"Type: " + self.fluid_type + " " + self.name + " " + self.weight + " " + "@" + self.mileage.to_s + " miles"
+		"Type of fluid: " + self.fluid_type + " " + self.name + " " + self.weight + " " + "@" + self.mileage.to_s + " miles"
 	end
 
 end

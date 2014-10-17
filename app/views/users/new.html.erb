@@ -1,11 +1,14 @@
-<%= flash[:error] if flash[:error] %>
-<%= form_for @user, url: {action: "create"} do |f| %>
-	<%= f.text_field :first_name, placeholder: "First Name" %><br>
-	<%= f.text_field :last_name, placeholder: "Last Name" %><br>
-	<%= f.text_field :email, placeholder: "Email" %><br>
-	<%= f.text_field :username, placeholder: "Username" %><br>
-	<%= f.text_field :password, placeholder: "password" %><br>
-	<%= f.text_field :password_confirmation, placeholder: "pw confirmation" %><br>
-	<%= f.submit "Sign Up" %>
+<div class="forms">
 
-<% end %>
+	<%= form_for @user, url: {action: "create"} do |f| %>
+		<%= f.text_field :first_name, placeholder: "First Name" %><br>
+		<%= f.text_field :last_name, placeholder: "Last Name" %><br>
+		<%= f.text_field :email, placeholder: "Email" %><br>
+		<%= f.text_field :username, placeholder: "Username" %><br>
+		<%= f.text_field :password, placeholder: "password" %><br>
+		<%= f.text_field :password_confirmation, placeholder: "pw confirmation" %><br>
+		<%= f.submit "Sign Up" %>
+	<% end %>
+	<%= flash[:error] if flash[:error] %>
+
+</div>
