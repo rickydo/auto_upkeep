@@ -1,10 +1,11 @@
-<div class="forms">
+<div class="vehicle_form">
 	<%= form_for @vehicle, url: {action: "create"} do |f| %>
 		<%= f.text_field :make, placeholder: "Make" %><br>
 		<%= f.text_field :model, placeholder: "Model" %><br>
 		<%= f.number_field :year, placeholder: "Year" %><br>
 		<%= f.text_field :style, placeholder: "Style" %><br>
 		<%= f.text_field :engine_size, placeholder: "Engine Size" %><br>
+		<%= f.hidden_field :user_id, :value => "#{current_user.id}" %>
 		<%= f.submit "Add Vehicle" %>
 	<% end %>
 

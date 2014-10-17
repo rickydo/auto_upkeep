@@ -4,6 +4,7 @@
 	<%= f.text_field :fluid_type, placeholder: "Fluid type" %><br>
 	<%= f.text_field :weight, placeholder: "weight"%><br>
 	<%= f.number_field :mileage, placeholder: "Mileage" %><br>
+	<%= f.hidden_field, :vehicle_id => "" %>
 	<%= f.submit "Change it!" %>
 	<% end %>
 	<%= flash[:error] if flash[:error] %>

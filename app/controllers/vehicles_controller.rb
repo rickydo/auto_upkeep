@@ -11,6 +11,8 @@ class VehiclesController < ApplicationController
 
 	def show
 		@vehicle = Vehicle.find(params[:id])
+		@vehicle_id = params[:id]
+		# raise params.inspect
 	end
 
 	def new
@@ -36,6 +38,7 @@ class VehiclesController < ApplicationController
 			:model,
 			:year,
 			:style,
-			:engine_size)
+			:engine_size,
+			:user_id)
 	end
 end
