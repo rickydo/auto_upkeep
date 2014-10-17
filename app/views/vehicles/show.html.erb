@@ -1,7 +1,7 @@
 <div class="container">
 	<h2><%= @vehicle.vehicle_info %></h2>
 	<h3>Fluid Changes:</h3>
-		<%= link_to "Change a Fluid", new_fluid_change_path %>
+		<%= link_to "Change a Fluid", new_vehicle_fluid_change_path(@vehicle.id) %>
 		<table class="fluid_change_table">
 			<tr>
 				<th>Fluid Type</th>
@@ -23,7 +23,7 @@
 		</table>
 
 	<h3>Parts Maintenance</h3>
-		<%= link_to "Change a part", new_part_path  %>
+		<%= link_to "Change a part", new_vehicle_part_path(@vehicle.id)  %>
 		<table class="parts_table">
 			<tr>
 				<th>Name</th>

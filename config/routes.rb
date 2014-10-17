@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
 
-  resources :users, :only => [:new, :create]
-  resources :vehicles
-  resources :fluid_change, :except => [:show]
-  resources :part, :except => [:show]
+  	resources :users, :only => [:new, :create]
+  	resources :vehicles do 
 
+	  resources :fluid_change, :except => [:show] 
+	  resources :part, :except => [:show]
+	end
 
   
 end
