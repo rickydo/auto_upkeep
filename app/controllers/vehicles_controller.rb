@@ -18,7 +18,7 @@ class VehiclesController < ApplicationController
 	end
 
 	def create
-		@vehicle = Vehicle.new
+		@vehicle = Vehicle.new(new_vehicle_params)
 
 		if @vehicle.save
 			redirect_to vehicles_path
@@ -26,5 +26,16 @@ class VehiclesController < ApplicationController
 			redirect_to new_vehicle_path
 			flash[:error] = @vehicle.errors.empty? ? "Error" : @vehicle.errors.full_messages.to_sentence
 		end
+	end
+
+	private 
+
+	def new_vehicle_params
+		params.require(:vehicle).permit(
+			:make,
+			:model,
+			:year,
+			:style,
+			:engine_size)
 	end
 end
