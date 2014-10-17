@@ -18,4 +18,7 @@ class Vehicle < ActiveRecord::Base
 		self.fluid_changes.last.fluid_change_text if self.fluid_changes.length > 0
 	end
 
+	def last_part_change
+		self.parts.last.part_text if self.parts.length > 0
+	end
 end

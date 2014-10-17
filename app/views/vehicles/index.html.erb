@@ -3,8 +3,12 @@
 	<%= link_to "Add Vehicle", new_vehicle_path %>
 	<ul>
 		<% @vehicles.each do |vehicle| %>
-			 <li><%= link_to "#{vehicle.make_model}", vehicle_path(vehicle)%>
-			 	<p><%=vehicle.last_fluid_change%></p></li>
+			<li><%= link_to "#{vehicle.make_model}", vehicle_path(vehicle)%>
+			 	<p><%=vehicle.last_fluid_change%></p>
+			 	<p><%=vehicle.last_part_change %></p>
+			 </li>
 		<% end %>
 	</ul>
+
+	
 </div>
