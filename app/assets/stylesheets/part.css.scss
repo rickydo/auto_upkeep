@@ -1,3 +1,16 @@
 // Place all the styles related to the part controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.part_form {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 5%;
+	
+	form {
+		text-align: center;
+	}
+
+	input {
+		margin-bottom: 5px;
+	}
+}
