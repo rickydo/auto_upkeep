@@ -1,8 +1,8 @@
 <div class="container">
 	<ul>
 		<% @vehicles.each do |vehicle| %>
-			 <li><%= link_to "#{vehicle.make_model}", vehicle_path(vehicle)%></li>
-			 	<p></p>
+			 <li><%= link_to "#{vehicle.make_model}", vehicle_path(vehicle)%>
+			 	<p><%=vehicle.last_fluid_change%></p></li>
 		<% end %>
 	</ul>
 </div>
