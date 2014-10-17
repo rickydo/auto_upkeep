@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   	resources :users, :only => [:new, :create]
   	resources :vehicles do 
 
-	  resources :fluid_change, :except => [:show] 
-	  resources :part, :except => [:show]
+	  resources :fluid_change, :except => [:show, :destroy] 
+	  resources :part, :except => [:show, :destroy]
 	end
 
   

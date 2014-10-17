@@ -11,7 +11,7 @@
 				<th>Changed On</th>
 			</tr>
 
-			<% @vehicle.fluid_changes.each do |change| %>
+			<% @vehicle.fluid_changes.order(created_at: :desc).each do |change| %>
 			<tr>
 				<td><%=change.fluid_type%></td>
 				<td><%= change.name %></td>
@@ -31,7 +31,7 @@
 				<th>Mileage(miles)</th>
 				<th>Changed On</th>
 			</tr>
-			<% @vehicle.parts.each do |part| %>
+			<% @vehicle.parts.order(created_at: :desc).each do |part| %>
 			<tr>
 				<td><%= part.name %></td>
 				<td><%= part.part_number %></td>

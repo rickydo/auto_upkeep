@@ -6,11 +6,11 @@ class FluidChangeController < ApplicationController
 
 	def create
 		@fluid_change = FluidChange.new(new_fluid_params)
-		
+
 		if @fluid_change.save
-			redirect_to vehicles_path
+			redirect_to vehicle_path(params[:vehicle_id])
 		else
-			redirect_to new_fluid_change_path
+			redirect_to new_vehicle_fluid_change_path
 			flash[:error] = @fluid_change.errors.empty? ? "Error" : @fluid_change.errors.full_message.to_sentence
 		end
 	end
