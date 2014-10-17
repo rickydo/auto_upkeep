@@ -1,3 +1,25 @@
 // Place all the styles related to the vehicles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fluid_change_table, .parts_table {
+	width: 100%;
+	min-width: 450px;
+}
+
+.fluid_change_table td, .parts_table td {
+	text-align: center;
+}
+
+.vehicle_form {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 5%;
+	form {
+		text-align: center;
+	}
+	input {
+		margin-bottom: 5px;
+	}
+
+}
