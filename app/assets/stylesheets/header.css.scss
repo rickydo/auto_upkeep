@@ -1,29 +1,66 @@
 header {
-	border: black solid 1px;
 	border-radius: 3px;
-	height: 75px;
-	width: 95%;
 	background-color: #848484;
 	margin: 0 auto;
-	h1 {
-		text-align: center;
+	height: 70px;
+
+	.app_title {
+		width: 30%;
+		display: inline-block;
+		margin: 0 auto;
+		h1 {
+			color: white;
+		}
+	}
+	
+	.nav_buttons {
 		display: inline-block;
 	}
-	.nav_bar {
-		.nav_buttons, .login {
-			display: inline-block;
-			position: relative;
-		}
 
-		a {
-			text-decoration: none;
-		}
-
-		i {
-			font-size: 2.5rem;
-			color: white;
-			margin-left: 0.4rem;
-		}
-
+	i {
+		// font-size: 2.5rem;
+		color: white;
+		margin-left: 0.4rem;
 	}
+
+	i#home_button.fa.fa-home {
+		font-size: 2.5rem;
+		margin-top: 15px;
+	}
+
+	i.fa.fa-car{
+		font-size: 2rem;
+		// margin-top: -30px;
+	}
+
+	.fa.fa-sign-out{
+		margin-right: 10px;
+		margin-top: 19px;
+		font-size: 2.2rem;
+		float: right;
+	}
+
+	span {
+		font-size: 2em;
+		color: white;
+		margin-left: 5%;
+	}
+	
 }
+
+
+@media (max-width: 400px){
+	i#home_button.fa.fa-home{
+		display: none;
+	}
+
+	.nav_buttons {
+		margin-top: 20px;
+		span {
+			font-size: 1rem;
+		}
+	}
+
+}
+
+
