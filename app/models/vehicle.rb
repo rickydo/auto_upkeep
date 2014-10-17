@@ -5,4 +5,16 @@ class Vehicle < ActiveRecord::Base
 	validates :make, presence: true
 	validates :model, presence: true
 	validates :year, presence: true, numericality: { only_integer: true } 
+
+	def make_model
+		self.make + " " + self.model
+	end
+
+	def vehicle_info
+		make_model + " " + self.year.to_s + " " + self.style + " " + self.engine_size
+	end
+
+	def last_fluid_change
+		self.fluid_changes.last
+	end
 end
