@@ -10,3 +10,16 @@
 .fluid_change_table td, .parts_table td {
 	text-align: center;
 }
+
+.vehicle_form {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 5%;
+	form {
+		text-align: center;
+	}
+	input {
+		margin-bottom: 5px;
+	}
+
+}
