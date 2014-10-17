@@ -7,4 +7,8 @@ class FluidChange < ActiveRecord::Base
 		"Type of fluid: " + self.fluid_type + " " + self.name + " " + self.weight + " " + "@" + self.mileage.to_s + " miles"
 	end
 
+	def change_date
+		self.created_at.strftime("%m/%d/%Y")
+	end
+
 end

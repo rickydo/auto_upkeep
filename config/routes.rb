@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   resources :users, :only => [:new, :create]
   resources :vehicles
-
+  resources :fluid_change
+  resources :part
 
 
   

@@ -7,6 +7,6 @@ class Part < ActiveRecord::Base
 	end
 
 	def part_date
-		self.created_at.strftime("changed on %m/%d/%Y")
+		self.created_at.strftime("%m/%d/%Y")
 	end
 end
